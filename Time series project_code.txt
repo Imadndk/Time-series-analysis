@@ -1,0 +1,35 @@
+import C:\Users\Hp\Desktop\real_interest_rate_USA.xlsx range=real_interest_rate_by_country colhead=1 na="#N/A" @freq A @id @date(temps) @smpl @all
+taux_d_interet_reel_en_usa.sheet
+{%graph}.line
+taux_d_interet_reel_en_usa.correl(30)
+close TAUX_D_INTERET_REEL_EN_USA
+taux_d_interet_reel_en_usa.correl(30)
+taux_d_interet_reel_en_usa.hist
+taux_d_interet_reel_en_usa.hist
+taux_d_interet_reel_en_usa.uroot(exog=trend)
+taux_d_interet_reel_en_usa.uroot
+taux_d_interet_reel_en_usa.uroot(exog=none)
+taux_d_interet_reel_en_usa.uroot(exog=trend, pp)
+series dtaux= taux_d_interet_reel_en_usa-taux_d_interet_reel_en_usa(-1)
+dtaux.sheet
+{%graph}.line
+dtaux.correl
+{%equation}.ls(optmethod=opg) dtaux ar(1) ma(1) c
+{%equation}.ls(optmethod=opg) dtaux ar(1) ma(1)
+{%equation}.ls(optmethod=opg) dtaux ar(1) ma(2)
+{%equation}.ls(optmethod=opg) dtaux ar(1) ar(2) ma(2)
+{%equation}.ls(optmethod=opg) dtaux ar(1) ar(2) ma(2) ma(1)
+{%equation}.ls(optmethod=opg) dtaux ar(1) ar(2) ma(2) ma(1) ar(3)
+{%equation}.ls(optmethod=opg) dtaux ar(1) ar(2)
+{%equation}.ls(optmethod=opg) dtaux ar(1) ar(2) c
+{%equation}.ls(optmethod=opg) dtaux ar(1)
+{%equation}.ls(optmethod=opg) dtaux ar(2)
+{%equation}.ls(optmethod=opg) dtaux ar(3)
+{%equation}.ls(optmethod=opg) dtaux ar(2) c
+{%equation}.ls(optmethod=opg) dtaux ma(1)
+{%equation}.ls(optmethod=opg) dtaux ma(2)
+{%equation}.ls(optmethod=opg) dtaux ma(1) ar(1)
+{%equation}.correl
+{%equation}.results
+{%equation}.hist
+{%equation}.white(c)
